@@ -96,6 +96,30 @@ var lutador =  new function(){
     this.estados[1].tabelatrans[6]=new Object();
     this.estados[1].tabelatrans[6].x=0;
     this.estados[1].tabelatrans[6].y=0;
+
+    this.estados[2] = new Estado(0,6,0,0,100);
+    this.estados[2].tabelatrans = new Array();
+    this.estados[2].tabelatrans[0]=new Object();
+    this.estados[2].tabelatrans[0].x=0;
+    this.estados[2].tabelatrans[0].y=0;
+    this.estados[2].tabelatrans[1]=new Object();
+    this.estados[2].tabelatrans[1].x=20;
+   // this.estados[2].tabelatrans[1].y=-20;
+    this.estados[2].tabelatrans[2]=new Object();
+    this.estados[2].tabelatrans[2].x=40;
+  //  this.estados[2].tabelatrans[2].y=-40;
+    this.estados[2].tabelatrans[3]=new Object();
+    this.estados[2].tabelatrans[3].x=60;
+  //  this.estados[2].tabelatrans[3].y=-40;
+    this.estados[2].tabelatrans[4]=new Object();
+    this.estados[2].tabelatrans[4].x=40;
+   // this.estados[2].tabelatrans[4].y=-20;
+    this.estados[2].tabelatrans[5]=new Object();
+    this.estados[2].tabelatrans[5].x=20;
+  //  this.estados[2].tabelatrans[5].y=-10;
+    this.estados[2].tabelatrans[6]=new Object();
+    this.estados[2].tabelatrans[6].x=0;
+  //  this.estados[2].tabelatrans[6].y=0;
       
     this.desenha = function(){
         var sx = this.agente.width*this.estados[this.corrente].num+this.estados[this.corrente].sx;
@@ -199,6 +223,7 @@ document.onkeydown = function(e){
     let keycode;
     if (window.event) keycode = window.event.keyCode;
     else if (e) keycode = e.which;
+    console.log(keycode);
     if (keycode===40) {
         lutador.iniciaEstado(0);
     } else if(keycode===38) {
