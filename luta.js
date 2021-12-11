@@ -103,19 +103,19 @@ var lutador =  new function(){
     this.estados[2].tabelatrans[0].x=0;
     this.estados[2].tabelatrans[0].y=0;
     this.estados[2].tabelatrans[1]=new Object();
-    this.estados[2].tabelatrans[1].x=20;
+    this.estados[2].tabelatrans[1].x=50;
    // this.estados[2].tabelatrans[1].y=-20;
     this.estados[2].tabelatrans[2]=new Object();
-    this.estados[2].tabelatrans[2].x=40;
+    this.estados[2].tabelatrans[2].x=100;
   //  this.estados[2].tabelatrans[2].y=-40;
     this.estados[2].tabelatrans[3]=new Object();
-    this.estados[2].tabelatrans[3].x=60;
+    this.estados[2].tabelatrans[3].x=150;
   //  this.estados[2].tabelatrans[3].y=-40;
     this.estados[2].tabelatrans[4]=new Object();
-    this.estados[2].tabelatrans[4].x=40;
+    this.estados[2].tabelatrans[4].x=100;
    // this.estados[2].tabelatrans[4].y=-20;
     this.estados[2].tabelatrans[5]=new Object();
-    this.estados[2].tabelatrans[5].x=20;
+    this.estados[2].tabelatrans[5].x=50;
   //  this.estados[2].tabelatrans[5].y=-10;
     this.estados[2].tabelatrans[6]=new Object();
     this.estados[2].tabelatrans[6].x=0;
@@ -147,6 +147,12 @@ var lutador =  new function(){
     
     this.calculaProxEstado = function() {
         switch(this.corrente) {
+            case 2:
+                if (this.estados[this.corrente].num === 
+                    this.estados[this.corrente].frameFim) {
+                    this.corrente =0;
+                }
+                break;
             case 1:
                 if (this.estados[this.corrente].num === 
                     this.estados[this.corrente].frameFim) {
