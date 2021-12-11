@@ -112,13 +112,13 @@ var lutador =  new function(){
     this.estados[2].tabelatrans[3].x=150;
     this.estados[2].tabelatrans[3].y=0;
     this.estados[2].tabelatrans[4]=new Object();
-    this.estados[2].tabelatrans[4].x=100;
+    this.estados[2].tabelatrans[4].x=200;
     this.estados[2].tabelatrans[4].y=0;
     this.estados[2].tabelatrans[5]=new Object();
-    this.estados[2].tabelatrans[5].x=50;
+    this.estados[2].tabelatrans[5].x=250;
     this.estados[2].tabelatrans[5].y=0;
     this.estados[2].tabelatrans[6]=new Object();
-    this.estados[2].tabelatrans[6].x=0;
+    this.estados[2].tabelatrans[6].x=300;
     this.estados[2].tabelatrans[6].y=0;
       
     this.desenha = function(){
