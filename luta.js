@@ -156,7 +156,7 @@ var lutador =  new function(){
             case 1:
                 if (this.estados[this.corrente].num === 
                     this.estados[this.corrente].frameFim) {
-                    this.corrente = this.estados[this.corrente].num =  this.estados[this.corrente].frameIni;
+                    this.corrente = 0;
                 }
                 break;
             case 0:
