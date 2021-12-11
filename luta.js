@@ -228,7 +228,9 @@ document.onkeydown = function(e){
         lutador.iniciaEstado(0);
     } else if(keycode===38) {
         lutador.iniciaEstado(1);
-    } 
+    }else if(keycode===39) {
+        lutador.iniciaEstado(2);
+    }  
 }
 
 GameLoop();
