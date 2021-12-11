@@ -97,7 +97,7 @@ var lutador =  new function(){
     this.estados[1].tabelatrans[6].x=0;
     this.estados[1].tabelatrans[6].y=0;
 
-    this.estados[2] = new Estado(0,1,0,0,500);
+    this.estados[2] = new Estado(0,1,0,0,100);
     this.estados[2].tabelatrans = new Array();
     this.estados[2].tabelatrans[0]=new Object();
     this.estados[2].tabelatrans[0].x=0;
