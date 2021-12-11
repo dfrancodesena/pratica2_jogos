@@ -98,6 +98,7 @@ var lutador =  new function(){
     this.estados[1].tabelatrans[6].y=0;
 
     this.estados[2] = new Estado(0,6,0,0,100);
+    this.estados[2] = new Estado(0,6,0,0,100);
     this.estados[2].tabelatrans = new Array();
     this.estados[2].tabelatrans[0]=new Object();
     this.estados[2].tabelatrans[0].x=0;
@@ -172,6 +173,7 @@ var lutadora =  new function(){
     this.estados[0] = new Estado(0,1,0,0,1000);
     
     this.estados[1] = new Estado(1,5,0,0,100); 
+    this.estados[2] = new Estado(1,5,0,0,100);
       
     this.desenha = function(){
         var sx = this.agente.width*this.estados[this.corrente].num+this.estados[this.corrente].sx;
@@ -230,7 +232,7 @@ document.onkeydown = function(e){
         lutador.iniciaEstado(1);
     }else if(keycode===39) {
         lutador.iniciaEstado(2);
-    }  
+    } 
 }
 
 GameLoop();
