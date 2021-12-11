@@ -121,6 +121,31 @@ var lutador =  new function(){
     this.estados[2].tabelatrans[6].x=300;
     this.estados[2].tabelatrans[6].y=0;
       
+    this.estados[3] = new Estado(0,1,0,0,750);
+    this.estados[3].tabelatrans = new Array();
+    this.estados[3].tabelatrans[0]=new Object();
+    this.estados[3].tabelatrans[0].x=0;
+    this.estados[3].tabelatrans[0].y=0;
+    this.estados[3].tabelatrans[1]=new Object();
+    this.estados[3].tabelatrans[1].x=50;
+    this.estados[3].tabelatrans[1].y=0;
+    this.estados[3].tabelatrans[2]=new Object();
+    this.estados[3].tabelatrans[2].x=100;
+    this.estados[3].tabelatrans[2].y=0;
+    this.estados[3].tabelatrans[3]=new Object();
+    this.estados[3].tabelatrans[3].x=150;
+    this.estados[3].tabelatrans[3].y=0;
+    this.estados[3].tabelatrans[4]=new Object();
+    this.estados[3].tabelatrans[4].x=200;
+    this.estados[3].tabelatrans[4].y=0;
+    this.estados[3].tabelatrans[5]=new Object();
+    this.estados[3].tabelatrans[5].x=250;
+    this.estados[3].tabelatrans[5].y=0;
+    this.estados[3].tabelatrans[6]=new Object();
+    this.estados[3].tabelatrans[6].x=300;
+    this.estados[3].tabelatrans[6].y=0;
+
+
     this.desenha = function(){
         var sx = this.agente.width*this.estados[this.corrente].num+this.estados[this.corrente].sx;
         if ( this.estados[this.corrente].muda()) this.estados[this.corrente].prox();
@@ -147,6 +172,12 @@ var lutador =  new function(){
     
     this.calculaProxEstado = function() {
         switch(this.corrente) {
+            case 3:
+                if (this.estados[this.corrente].num === 
+                    this.estados[this.corrente].frameFim) {
+                    this.corrente =3;
+                }
+                break;
             case 2:
                 if (this.estados[this.corrente].num === 
                     this.estados[this.corrente].frameFim) {
@@ -237,6 +268,8 @@ document.onkeydown = function(e){
         lutador.iniciaEstado(1);
     }else if(keycode===39) {
         lutador.iniciaEstado(2);
+    } else if(keycode===37) {
+        lutador.iniciaEstado(3);
     } 
 }
 
